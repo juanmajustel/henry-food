@@ -1,0 +1,178 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6em;
+  width: 98%;
+  padding: 1rem 2%;
+  background-color: rgba(37, 33, 33, 0.651);
+  background-position: center;
+  margin: none;
+}
+
+.logo {
+  display: flex;
+  width: 12em;
+  grid: 10em;
+  /* border-radius: 10px; */
+}
+.logo:hover {
+  scale: 1.5;
+}
+
+.logo:active {
+  scale: 0.96;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.search {
+  display: flex;
+  gap: 3em;
+}
+
+.search > .group {
+  display: flex;
+  line-height: 30px;
+  align-items: center;
+  position: relative;
+  max-width: 200px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #05060f99;
+  transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+}
+.input {
+  border: 10px;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #e8e8e8;
+  box-shadow: 6px 6px 12px #ffffffa1, -6px -6px 12px #c5c5c5;
+  font-size: larger;
+  font-weight: bold;
+  max-width: 200px;
+}
+
+.input:focus {
+  outline-color: white;
+  place-content: "Enter your message!";
+}
+.input {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  border-color: rgba(234, 76, 137, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+
+.buttonCreate {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonCreate:hover,
+.buttonCreate:focus {
+  background-color: #740fe7;
+  box-shadow: 0px 15px 20px rgba(177, 46, 229, 0.651);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.buttonCreate:hover {
+  background-color: #740fe7;
+  box-shadow: 0px 15px 20px rgba(177, 46, 229, 0.651);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.buttonCreate:active {
+  transform: translateY(-1px);
+}
+.btnReload {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+/* .btnReload:hover {
+  background-color: rgb(80, 80, 80);
+  color: white;
+  height: 50px;
+  width: 100px;
+  transition: 0.2s;
+} */
+/* .btnReload:hover,
+.btnReload:focus {
+  background-color: #740fe7;
+  box-shadow: 0px 15px 20px rgba(177, 46, 229, 0.651);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.btnReload:active {
+  transform: translateY(-1px);
+} */
+/* .btnReload::hover {
+  background-color: #740fe7;
+  box-shadow: 0px 15px 20px rgba(177, 46, 229, 0.651);
+  color: #fff;
+  transform: translateY(-7px);
+} */

@@ -1,0 +1,201 @@
+.side {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1.2rem;
+  min-width: 15rem;
+  height: fit-content;
+  background-color: #abcfffdc;
+  color: rgb(19, 17, 17);
+  border-radius: 0.4rem / 0.4rem;
+}
+
+.side > h2 {
+  font-size: 1.2rem;
+  color: hsl(59, 100%, 50%);
+}
+
+.line {
+  color: rgb(8, 8, 8);
+  width: 95%;
+}
+
+.filterConteiner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.9rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.orderConteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.orderConteiner > .resetButton {
+  color: rgb(243, 243, 242);
+  border: none;
+  font-weight: bolder;
+  background-color: rgba(89, 89, 89, 0.267);
+  width: 7rem;
+  padding: 0.4rem 0rem;
+}
+
+.orderConteiner > .resetButton:hover {
+  scale: 1.04;
+}
+
+.orderConteiner > .resetButton:active {
+  color: rgba(65, 65, 65, 0.123);
+  background-color: rgba(255, 255, 255, 0.724);
+  scale: 0.9;
+}
+
+.orderConteiner > .resetButton:disabled {
+  color: rgb(65, 65, 65);
+  background-color: hsla(39, 100%, 50%, 0.866);
+}
+
+.orderConteiner > .resetButton:disabled:hover {
+  scale: 1;
+}
+
+.orderConteiner > .resetButton:disabled:active {
+  scale: 1;
+}
+
+.resetButton {
+  padding: 20px 60px;
+  background-color: rgba(0, 0, 0, 0.521);
+  border: none;
+  font-size: 18px;
+  position: relative;
+  /* overflow: hidden; */
+  transition: 500ms;
+}
+
+.resetButton span {
+  color: rgb(255, 252, 252);
+  position: relative;
+  transition: 500ms;
+  transition-delay: 500ms;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.resetButton:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  bottom: 50%;
+  transition: 500ms;
+  transition-delay: 500ms;
+  background-color: red;
+  box-shadow: 0 0 10px red, 0 0 30px red, 0 0 50px red;
+}
+
+.resetButton div {
+  transition: 500ms;
+  position: absolute;
+  background-color: red;
+  box-shadow: 0 0 15px red, 0 0 30px red, 0 0 50px red;
+}
+
+.resetButton .top {
+  width: 15px;
+  height: 2px;
+  top: 0;
+  left: 0;
+}
+
+.resetButton .bottom {
+  width: 15px;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+}
+
+.resetButton .left {
+  width: 2px;
+  height: 15px;
+  top: 0;
+  left: 0;
+}
+
+.resetButton .right {
+  width: 2px;
+  height: 15px;
+  bottom: 0;
+  right: 0;
+}
+
+.resetButton:hover {
+  color: #000;
+}
+
+.resetButton:hover span {
+  color: #000;
+}
+
+.resetButton:hover:before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.resetButton:hover .top,
+.resetButton:hover .bottom {
+  width: 100%;
+}
+
+.resetButton:hover .left,
+.resetButton:hover .right {
+  height: 100%;
+}
+
+.filterRecipes {
+  padding: 17px 40px;
+  border-radius: 50px;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.filterRecipes:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+.filterRecipes:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}

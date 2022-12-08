@@ -1,0 +1,101 @@
+.background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("./backgroundVid.mp4");
+  background-position: top center;
+  background-size: cover;
+}
+
+.video {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 24em;
+  min-height: 24em;
+  padding: 2em;
+  border-radius: 10px;
+  border: 11px solid rgb(241, 117, 0);
+  box-shadow: rgba(255, 207, 162, 0.541) 0px 0px 500px 54px,
+    rgba(250, 249, 248, 0.801) 0px 0px 15px 10px;
+  background-image: url("../../image/blackboard.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card > img {
+  width: 24em;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+.buttonHome {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 3px;
+  height: 3em;
+  padding: 0 3em;
+  border: none;
+  background-color: #c41b54;
+  color: #fff;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.buttonHome::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 100%;
+  background: rgba(233, 145, 14, 0.705);
+  background: linear-gradient(
+    90deg,
+    rgba(233, 145, 14, 0.705) 20%,
+    rgba(233, 145, 14, 0.705) 100%
+  );
+  transition: 0.2s;
+}
+
+.buttonHome .label {
+  position: relative;
+}
+
+.buttonHome .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  top: 3em;
+  right: 0;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.buttonHome:hover::before {
+  height: 100%;
+}
+
+.buttonHome:hover .icon {
+  top: 0;
+  opacity: 1;
+}

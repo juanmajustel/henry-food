@@ -1,0 +1,13 @@
+.cards {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+}
+
+.cards > a {
+  color: #121213;
+  text-decoration: none;
+}

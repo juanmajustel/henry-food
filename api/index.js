@@ -19,6 +19,8 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn, Diet } = require('./src/db.js');
+require('dotenv').config()
+
 
 const typesOfDiets = ["dairy free",
   "fodmap friendly",
@@ -32,10 +34,11 @@ const typesOfDiets = ["dairy free",
   "whole 30"]
 
 // Syncing all the models at once.
-conn.sync({ force: false })
+conn.sync({ force: true })
   .then(() => {
-    server.listen(3001, () => {
-      console.log('%s listening at 3001'); // eslint-disable-line no-console
+    server.listen(process.env.PORT, () => {
+      console.log('%s listening at ', process.env.PORT); // eslint-disable-line no-console
       typesOfDiets.map((type) => Diet.findOrCreate({ where: { name: type } }))
     });
   });
+

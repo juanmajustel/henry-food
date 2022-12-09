@@ -33,7 +33,7 @@ const getRecipeByName = async (req, res) => {
         const { name } = req.query
 
         // Busca 100 recetas en la API 
-        const { results } = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`)
+        const { results } = await axios.get(` https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5/&addRecipeInformation=true&number=100`)
             // `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`
 
             .then(r => r.data);
@@ -84,14 +84,15 @@ const getRecipeById = async (req, res) => {
 
         if (!id.includes("-")) {
 
-            const recipeApi = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`)
+            const recipeApi = await axios.get(` https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5/&addRecipeInformation=true&number=100`)
                 .then(r => r.data);
 
             if (recipeApi.hasOwnProperty('id')) return res.json(reduceObjectsRecipes(recipeApi));
 
         } else {
 
-            const recipeDB = await Recipe.findByPk(id, {
+            const recipeDB = await Recipe.findByPk(
+                id, {
                 include: {
                     model: Diet,
                     as: "diets",
